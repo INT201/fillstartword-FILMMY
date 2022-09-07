@@ -2,7 +2,7 @@ const { template } = require('@babel/core')
 
 function fillStartWord(startWord, word) {
   if (word == null || word == undefined){
-    return String(undefined)
+    return undefined
   }
   else if (startWord.length == word.length){
     return console.log(word)
