@@ -1,14 +1,12 @@
 const { template } = require('@babel/core')
 
 function fillStartWord(startWord, word) {
-  if (word == null || word == undefined){
+  if (word === null || word === undefined){
     return undefined
   }
-  else if (startWord.length == word.length){
-    return console.log(word)
-  }else if (startWord.length != word.length){
-    return String(startWord+word)
-  }
+  else if (word.indexOf(startWord)>=0){
+    return word
+  }else return startWord+word
 }
 
 // console.log(fillStartWord("first",))
